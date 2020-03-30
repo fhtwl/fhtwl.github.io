@@ -1,6 +1,6 @@
 # 进入生成的文件夹
-echo "执行命令：cd docs/vuepress/dist\n"
-cd docs/vuepress/dist
+echo "执行命令：cd ./docs/vuepress/dist\n"
+cd ./docs/vuepress/dist
 
 # 初始化一个仓库，仅仅是做了一个初始化的操作，项目里的文件还没有被跟踪
 echo "执行命令：git init\n"
