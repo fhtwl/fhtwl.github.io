@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "vuepress": "^1.0.1"
+    "vuepress": "^1.5.2"
   },
   "devDependencies": {
-    "vuepress-theme-reco": "^1.1.4"
+    "vuepress-theme-reco": "^1.4.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
