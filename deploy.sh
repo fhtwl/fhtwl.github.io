@@ -1,5 +1,17 @@
 # 进入生成的文件夹 编译成静态文件
 vuepress build docs
+
+# 保存所有的修改
+echo "执行命令：git add -A"
+git add -A 
+
+# 把修改的文件提交
+echo "执行命令：commit -m 'deploy'"
+git commit -m 'deploy'
+
+# 发布到 https://github.com/fhtwl/boke.git
+git push -f https://github.com/fhtwl/boke.git master
+
 # 进入生成的文件夹
 echo "执行命令：cd ./docs/.vuepress/dist\n"
 cd ./docs/.vuepress/dist
