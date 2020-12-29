@@ -2,7 +2,7 @@
 title: vue报错 Vue is not defined问题
 date: 2019-08-02
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - vue.js
  - js

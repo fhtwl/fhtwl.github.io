@@ -1,8 +1,8 @@
 --- 
-title: npm清除缓存
+title: npm换源
 date: 2020-12-28
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - nodejs
  - npm

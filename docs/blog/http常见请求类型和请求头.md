@@ -2,7 +2,7 @@
 title: http常见请求类型和请求头
 date: 2020-12-18
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - http
 ---

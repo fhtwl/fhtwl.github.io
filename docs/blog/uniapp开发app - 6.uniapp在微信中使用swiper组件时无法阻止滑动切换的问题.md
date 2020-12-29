@@ -2,7 +2,7 @@
 title: uniapp开发app - 6.uniapp在微信中使用swiper组件时无法阻止滑动切换的问题
 date: 2020-05-05
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - uniapp
  - webapp

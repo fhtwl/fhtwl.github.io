@@ -2,7 +2,7 @@
 title: 判断当前浏览器是否支持定位position属性sticky
 date: 2019-06-19
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - 移动端
  - css

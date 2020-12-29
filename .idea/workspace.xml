@@ -2,7 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f065cc5a-d7a3-4f32-b289-b161a653c4e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190617_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190617_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190619_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190619_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190620_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190620_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190620_3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190627_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190627_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190628_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190731_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190802_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20190802_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200303_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200327_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200327_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200327_3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200406_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200505_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200506_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200507_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200530_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200610_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20200622_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20201218_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20201218_2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20201218_3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/blog/20201228_1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/categories/backEnd.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/categories/frontEnd.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/categories/other.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/categories/thinkin.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,12 +46,24 @@
   <component name="FileEditorManager">
     <leaf />
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>frontEnd</find>
+      <find>backEnd</find>
+      <find>other</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>前端</replace>
+      <replace>後端</replace>
+      <replace>后端</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="177" />
-    <option name="y" value="60" />
+    <option name="x" value="239" />
+    <option name="y" value="36" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -28,8 +73,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -63,10 +106,18 @@
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="boke" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boke" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -101,16 +152,17 @@
       <updated>1609151077904</updated>
       <workItem from="1609151080866" duration="298000" />
       <workItem from="1609151630249" duration="207000" />
+      <workItem from="1609213463922" duration="368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505000" />
+    <option name="totallyTimeSpent" value="873000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="177" y="60" width="1400" height="1000" extended-state="0" />
+    <frame x="239" y="36" width="1400" height="1000" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -125,7 +177,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3290993" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3290993" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />

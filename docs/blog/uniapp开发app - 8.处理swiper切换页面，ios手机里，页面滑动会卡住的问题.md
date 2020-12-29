@@ -2,7 +2,7 @@
 title: uniapp开发app - 8.处理swiper切换页面，ios手机里，页面滑动会卡住的问题
 date: 2020-12-18
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - js
  - uniapp

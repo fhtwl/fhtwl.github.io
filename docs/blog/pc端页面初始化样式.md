@@ -1,17 +1,17 @@
 --- 
-title: m端页面初始化样式 
+title: pc端页面初始化样式
 date: 2019-06-17
 categories: 
- - frontEnd
+ - 前端
 tags: 
+ - pc
  - css
- - 移动端
 ---
 
-### reset.css
+## pc端页面初始化样式
+>reset.css
 
 ``` css
-
 html,
 body,
 div,
@@ -93,10 +93,11 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    font:400 1em/1 "Microsoft Yahei", "PingFang SC", "Avenir", "Segoe UI", "Hiragino Sans GB", STHeiti, "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif
+    font:400 1em/1.8 "Microsoft Yahei", "PingFang SC", "Avenir", "Segoe UI", "Hiragino Sans GB", STHeiti, "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif
 }
 
 .zoom{cursor:default;}
+
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -160,4 +161,13 @@ a span,a img,a span,a p {
 }
 a:focus{outline:none;}
 
+.clearbox:before,
+.clearbox:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+a {
+	color:#999;
+}
 ```

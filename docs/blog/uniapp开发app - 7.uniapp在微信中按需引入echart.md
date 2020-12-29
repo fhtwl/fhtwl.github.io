@@ -2,7 +2,7 @@
 title: uniapp开发app - 7.uniapp在微信中按需引入echart
 date: 2020-05-06
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - uniapp
  - webapp

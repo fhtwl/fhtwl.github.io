@@ -2,7 +2,7 @@
 title: uniapp开发app - 1.uniapp环境配置
 date: 2020-03-03
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - uniapp
  - webapp

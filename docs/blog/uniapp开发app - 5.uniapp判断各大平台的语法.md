@@ -2,7 +2,7 @@
 title: uniapp开发app - 5.uniapp判断各大平台的语法
 date: 2020-04-06
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - uniapp
  - webapp

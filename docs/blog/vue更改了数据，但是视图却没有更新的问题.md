@@ -2,7 +2,7 @@
 title: vue更改了数据，但是视图却没有更新的问题
 date: 2019-08-02
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - array
  - vue.js

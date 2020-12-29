@@ -2,7 +2,7 @@
 title: Markdown常用语法
 date: 2019-06-20
 categories: 
- - other
+ - 其它
 tags: 
  - markdown
 ---

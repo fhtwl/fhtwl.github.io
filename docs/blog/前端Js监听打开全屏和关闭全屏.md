@@ -2,7 +2,7 @@
 title: 前端Js监听打开全屏和关闭全屏
 date: 2020-06-22
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - js
  - event

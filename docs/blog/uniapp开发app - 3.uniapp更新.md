@@ -2,7 +2,7 @@
 title: uniapp开发app - 3.uniapp更新
 date: 2020-03-27
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - uniapp
  - vue.js

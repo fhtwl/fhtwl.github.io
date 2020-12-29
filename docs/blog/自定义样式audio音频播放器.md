@@ -2,7 +2,7 @@
 title: 自定义样式audio音频播放器
 date: 2019-06-28
 categories: 
- - frontEnd
+ - 前端
 tags: 
  - audio
  - H5
