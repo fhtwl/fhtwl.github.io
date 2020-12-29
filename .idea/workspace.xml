@@ -2,40 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f065cc5a-d7a3-4f32-b289-b161a653c4e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/dist" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190617_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190617_2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190619_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190619_2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190620_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190620_2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190620_3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190627_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190627_2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190628_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190731_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190802_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20190802_2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200303_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200327_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200327_2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200327_3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200406_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200505_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200506_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200507_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200530_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200610_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20200622_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20201218_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20201218_2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20201218_3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/blog/20201228_1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/categories/backEnd.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/categories/frontEnd.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/categories/other.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/categories/thinkin.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/public/live2dw/initLine2dw.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/public/live2dw/initLine2dw.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +42,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,14 +87,13 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1609151685516" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../hzkj/company/clouds/services" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -153,16 +122,17 @@
       <workItem from="1609151080866" duration="298000" />
       <workItem from="1609151630249" duration="207000" />
       <workItem from="1609213463922" duration="368000" />
+      <workItem from="1609229557289" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="873000" />
+    <option name="totallyTimeSpent" value="889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="239" y="36" width="1400" height="1000" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26119402" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
