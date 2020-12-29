@@ -7,5 +7,31 @@ tags:
  - nodejs
  - npm
 --- 
-## npm清除缓存
-删除node_modules文件夹和package-lock.json文件，然后命令行执行npm cache clean --force
+## npm换源
+
+* 单次使用
+
+``` sh
+npm install --registry=https://registry.npm.taobao.org
+```
+
+* 永久使用
+
+```sh
+npm config set registry https://registry.npm.taobao.org
+```
+
+检测是否修改成功
+
+``` sh
+// 配置后可通过下面方式来验证是否成功
+npm config get registry
+// 或
+npm info express
+```
+
+如果想还原
+
+```sh
+npm config set registry https://registry.npmjs.org/
+```
