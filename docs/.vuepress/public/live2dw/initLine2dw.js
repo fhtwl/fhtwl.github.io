@@ -23,6 +23,7 @@ window.onload = function () {
                     break
                 }
             }
+            console.log(msg)
             // L2Dwidget.dialog(msg)
         })
         .init({
