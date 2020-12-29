@@ -12,6 +12,11 @@ git commit -m 'deploy'
 # 发布到 https://github.com/fhtwl/boke.git
 git push -f https://github.com/fhtwl/boke.git master
 
+# 源码发布成功
+echo "源码发布成功"
+
+####################
+
 # 进入生成的文件夹
 echo "执行命令：cd ./docs/.vuepress/dist\n"
 cd ./docs/.vuepress/dist
@@ -34,6 +39,9 @@ git push -f https://github.com/fhtwl/fhtwl.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages
+
+# 编译文件提交成功
+echo "编译文件提交成功"
 
 # 返回到上一次的工作目录
 echo "回到刚才工作目录"
