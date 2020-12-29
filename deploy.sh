@@ -1,5 +1,6 @@
 # 进入生成的文件夹 编译成静态文件
-vuepress build docs
+# vuepress build docs
+npm run docs:build
 
 # 保存所有的修改
 echo "执行命令：git add -A"
