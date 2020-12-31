@@ -5,9 +5,10 @@ module.exports = {
 	head: [
 		['link', { rel: 'icon', href: 'favicon.ico' }],
 		['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-		['script',{ src: '/live2dw/lib/L2Dwidget.min.js' }],
-		['script',{ src: '/live2dw/lib/L2Dwidget.0.min.js' }],
-		['script',{ src: '/live2dw/initLine2dw.js' }]
+		['script',{ src: '/live2dw/L2Dwidget.min.js' }],
+		['script',{ src: '/live2dw/L2Dwidget.0.min.js' }],
+		['script',{ src: '/live2dw/initLine2dw.js' }],
+		['link', { rel: 'stylesheet', href: '/live2dw/initLine2dw.css' }],
 	],
 	theme: 'reco',
 	themeConfig: {
