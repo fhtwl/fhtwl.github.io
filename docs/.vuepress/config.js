@@ -77,7 +77,15 @@ module.exports = {
 			appId: 'qUQMGTPIMzqba3Lk57jU25RK-gzGzoHsz',// your appId
 			appKey: 'fMavvPU8S5WJk1rKvsdDdqgx', // your appKey
 			verify: 'true'
-		}
+		},
+		friendLink: [
+			{
+				title: '素秋云',
+				desc: '一个默默奋进的Java开发者。',
+				logo: "https://wang_yongquan.gitee.io/blog/images/logo.jpg",
+				link: 'http://wang_yongquan.gitee.io/blog/'
+			},
+		]
 	}
 	
 }
