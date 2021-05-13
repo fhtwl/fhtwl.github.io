@@ -73,7 +73,7 @@ npm init
     5.1 下载包
     在小程序项目根目录执行npm install --save fhtwl-miniprogram-pagination
     ``` sh
-        npm install --save fhtwl-miniprogram-pagination
+    npm install --save fhtwl-miniprogram-pagination
     ```
 
     5.2 构建npm
@@ -96,3 +96,43 @@ npm init
     ``` js
     const myPackage = require('packageName')
     ```
+
+6. 维护和更新
+
+    后续还可能需要迭代版本
+
+    6.1. 使用git维护版本
+
+        6.1.1. 初始化git环境
+            创建git目录
+            ```
+            git init
+            ```
+        6.1.2. 在github上创建仓库
+        6.1.3. 设置远程仓库
+            设置账户
+            ```
+            git config --global user.name "fhtwl"
+            git config --global user.email "fhtwl@159xxxxxxx.com"
+            
+            ```
+            添加远程仓库
+            ```
+            git remote add origin "https://gitee.com/fhtwl/fhtwl-miniprogram-pagination.git"
+            ```
+
+    6.2. 将新版本推送到npm
+    
+        6.2.1. 更新版本号
+            执行 npm version <update_type>
+            ```
+            npm version patch
+            ```
+            update_type 有3个值：patch, minor, or majorpatch 分别表示小补丁、小改、大改 <br>
+            执行后package.json会根据 update_type 的值而更新变化<br>
+        
+        6.2.2. 推送到npm
+            执行 npm poblish
+            ```
+            npm poblish
+            ```
