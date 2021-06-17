@@ -1,10 +1,12 @@
 --- 
 title: js浮点数计算误差解决
-date: 2020-12-18
+date: 2021-06-17
 categories: 
  - 前端
 tags: 
- - http
+ - javascript
+ - 浮点数
+ - float
 ---
 
 ## js浮点数计算误差解决
