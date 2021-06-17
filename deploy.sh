@@ -13,6 +13,8 @@ git commit -m 'deploy'
 # 发布到 git@github.com:fhtwl/boke.git
 git push -f git@github.com:fhtwl/boke.git master
 
+git push -f git@gitee.com:fhtwl/boke.git master
+
 # 源码发布成功
 echo "源码发布成功"
 
@@ -37,6 +39,8 @@ git commit -m 'deploy'
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:fhtwl/fhtwl.github.io.git master
 git push -f git@github.com:fhtwl/fhtwl.github.io.git master
+
+git push -f git@gitee.com:fhtwl/fhtwl.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages
