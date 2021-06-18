@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "vuepress": "^1.5.2"
+    "vuepress": "^1.8.2"
   },
   "devDependencies": {
     "esm": "^3.0.0",
-    "vuepress-theme-reco": "^1.4.7"
+    "vuepress-theme-reco": "^1.6.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
