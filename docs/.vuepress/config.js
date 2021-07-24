@@ -22,6 +22,7 @@ module.exports = {
 			{ text: '时间线', link: '/timeLine/', icon: 'reco-date' },
 			{ text: 'GitHub', link: 'https://github.com/fhtwl/fhtwl.github.io', icon: 'reco-github' },
 		],
+		sidebar: [],
 		// sidebar: [
 		// 	{
 		// 		title: '起步',
