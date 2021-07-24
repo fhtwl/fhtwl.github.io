@@ -10,7 +10,7 @@ module.exports = {
 		['script',{ src: '/live2dw/initLine2dw.js' }],
 		['link', { rel: 'stylesheet', href: '/live2dw/initLine2dw.css' }],
 	],
-	theme: 'reco',
+	theme: 'reco', // reco, yuu
 	themeConfig: {
 		author: 'fhtwl', //全局作者
 		huawei: false,
