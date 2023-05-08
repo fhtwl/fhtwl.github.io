@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>低代码页面拖拽编辑器开发 --- 1. 项目主要功能和实现思路 | 云游</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="favicon.ico">
+    <script src="/live2dw/L2Dwidget.min.js"></script>
+    <script src="/live2dw/L2Dwidget.0.min.js"></script>
+    <script src="/live2dw/initLine2dw.js"></script>
+    <link rel="stylesheet" href="/live2dw/initLine2dw.css">
+    <meta name="description" content="仰天大笑出门去">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.746f5c46.css" as="style"><link rel="preload" href="/assets/js/app.bb41b8b8.js" as="script"><link rel="preload" href="/assets/js/3.dc5e7bc7.js" as="script"><link rel="preload" href="/assets/js/1.f19b5812.js" as="script"><link rel="preload" href="/assets/js/69.8a1d0022.js" as="script"><link rel="prefetch" href="/assets/js/10.063f4d84.js"><link rel="prefetch" href="/assets/js/11.7aaafe6d.js"><link rel="prefetch" href="/assets/js/12.1d3cbcb7.js"><link rel="prefetch" href="/assets/js/13.3eff3441.js"><link rel="prefetch" href="/assets/js/14.02dd8526.js"><link rel="prefetch" href="/assets/js/15.50ff646b.js"><link rel="prefetch" href="/assets/js/16.27b298f9.js"><link rel="prefetch" href="/assets/js/17.e2099983.js"><link rel="prefetch" href="/assets/js/18.46575e3b.js"><link rel="prefetch" href="/assets/js/19.a6f6542f.js"><link rel="prefetch" href="/assets/js/20.7a97f207.js"><link rel="prefetch" href="/assets/js/21.44aae7d8.js"><link rel="prefetch" href="/assets/js/22.deee24a8.js"><link rel="prefetch" href="/assets/js/23.afc5c989.js"><link rel="prefetch" href="/assets/js/24.5cc0db4a.js"><link rel="prefetch" href="/assets/js/25.b32a0210.js"><link rel="prefetch" href="/assets/js/26.dd7f021b.js"><link rel="prefetch" href="/assets/js/27.75cbd20b.js"><link rel="prefetch" href="/assets/js/28.fd785ab3.js"><link rel="prefetch" href="/assets/js/29.ab41b57d.js"><link rel="prefetch" href="/assets/js/30.3b45d1b9.js"><link rel="prefetch" href="/assets/js/31.265c7096.js"><link rel="prefetch" href="/assets/js/32.a389e6c4.js"><link rel="prefetch" href="/assets/js/33.21b47ce7.js"><link rel="prefetch" href="/assets/js/34.2e4a9508.js"><link rel="prefetch" href="/assets/js/35.2cf2d583.js"><link rel="prefetch" href="/assets/js/36.04f28724.js"><link rel="prefetch" href="/assets/js/37.9ae99470.js"><link rel="prefetch" href="/assets/js/38.ba5a299d.js"><link rel="prefetch" href="/assets/js/39.ee22d2a7.js"><link rel="prefetch" href="/assets/js/4.47f43f55.js"><link rel="prefetch" href="/assets/js/40.f39e2de0.js"><link rel="prefetch" href="/assets/js/41.2e5294db.js"><link rel="prefetch" href="/assets/js/42.bf48ff38.js"><link rel="prefetch" href="/assets/js/43.c357ee2c.js"><link rel="prefetch" href="/assets/js/44.44e307d8.js"><link rel="prefetch" href="/assets/js/45.233a8aec.js"><link rel="prefetch" href="/assets/js/46.e1ecc5c4.js"><link rel="prefetch" href="/assets/js/47.ba60baaf.js"><link rel="prefetch" href="/assets/js/48.68b91f10.js"><link rel="prefetch" href="/assets/js/49.0e497621.js"><link rel="prefetch" href="/assets/js/5.e8c05b51.js"><link rel="prefetch" href="/assets/js/50.9a2c708d.js"><link rel="prefetch" href="/assets/js/51.7b06c587.js"><link rel="prefetch" href="/assets/js/52.10498614.js"><link rel="prefetch" href="/assets/js/53.a761f85e.js"><link rel="prefetch" href="/assets/js/54.74a61bd8.js"><link rel="prefetch" href="/assets/js/55.042dd0bb.js"><link rel="prefetch" href="/assets/js/56.f3d86d97.js"><link rel="prefetch" href="/assets/js/57.efb08319.js"><link rel="prefetch" href="/assets/js/58.1989caf6.js"><link rel="prefetch" href="/assets/js/59.f96f3191.js"><link rel="prefetch" href="/assets/js/6.027fb3c9.js"><link rel="prefetch" href="/assets/js/60.3bbca17f.js"><link rel="prefetch" href="/assets/js/61.4daed6ce.js"><link rel="prefetch" href="/assets/js/62.d4770557.js"><link rel="prefetch" href="/assets/js/63.3164420a.js"><link rel="prefetch" href="/assets/js/64.6d294ffc.js"><link rel="prefetch" href="/assets/js/65.c80d1e4a.js"><link rel="prefetch" href="/assets/js/66.9a35d593.js"><link rel="prefetch" href="/assets/js/67.475b1606.js"><link rel="prefetch" href="/assets/js/68.96fd51bc.js"><link rel="prefetch" href="/assets/js/7.b5f855a8.js"><link rel="prefetch" href="/assets/js/70.01cd122f.js"><link rel="prefetch" href="/assets/js/71.f60293c4.js"><link rel="prefetch" href="/assets/js/72.c81ec735.js"><link rel="prefetch" href="/assets/js/8.5ac3177c.js"><link rel="prefetch" href="/assets/js/9.070251bd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.746f5c46.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1aefc0b4><div data-v-1aefc0b4><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1aefc0b4 data-v-1aefc0b4><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>云游</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>仰天大笑出门去</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>fhtwl</span>
+            
+          <!---->
+          2023
+        </a></span></div></div> <div class="hide" data-v-1aefc0b4><header class="navbar" data-v-1aefc0b4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">云游</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其它/" class="nav-link"><i class="undefined"></i>
+  其它
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="undefined"></i>
+  后端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="https://github.com/fhtwl/fhtwl.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1aefc0b4></div> <aside class="sidebar" data-v-1aefc0b4><div class="personal-info-wrapper" data-v-39576ba9 data-v-1aefc0b4><!----> <h3 class="name" data-v-39576ba9>
+    fhtwl
+  </h3> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>61</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>66</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其它/" class="nav-link"><i class="undefined"></i>
+  其它
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="undefined"></i>
+  后端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="https://github.com/fhtwl/fhtwl.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>低代码页面拖拽编辑器开发 --- 1. 项目主要功能和实现思路</h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>fhtwl</span>
+            
+          <!---->
+          2023
+        </a></span></div></div> <div data-v-1aefc0b4><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">低代码页面拖拽编辑器开发 --- 1. 项目主要功能和实现思路</h1> <div data-v-f875f3fc><i class="iconfont reco-account" data-v-f875f3fc><span data-v-f875f3fc>fhtwl</span></i> <i class="iconfont reco-date" data-v-f875f3fc><span data-v-f875f3fc>1/26/2022</span></i> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/blog/vue/30.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-f875f3fc><span class="tag-item" data-v-f875f3fc>低代码平台</span><span class="tag-item" data-v-f875f3fc>vue.js</span><span class="tag-item" data-v-f875f3fc>js</span><span class="tag-item" data-v-f875f3fc>lowCode</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="_1-业务场景"><a href="#_1-业务场景" class="header-anchor">#</a> 1. 业务场景</h2> <p>公司需要我开发一个看板编辑器, 功能简单来说, 就是可以拖拽组件生成一个页面. <br></p> <p>目前该项目的核心功能都已做完, 写这个博客主要是为了做个总结. <br></p> <p>原型如下<br></p><div style="text-align:center;"><img src="/images/20220126/原型.jpg" style="text-align:center;"></div><p></p> <p>最后开发出来的效果如下
+</p><div style="text-align:center;"><img src="/images/20220126/成果1.jpg"><br> <img src="/images/20220126/成果2.jpg"><br> <img src="/images/20220126/成果3.jpg"><br> <img src="/images/20220126/成果4.jpg"><br></div><p></p> <p>在这个系统里，用户可以先创建一个业务组件, 比如创建一个柱状图: <br></p><div style="text-align:center;"><img src="/images/20220126/创建业务组件.jpg" style="text-align:center;"></div>
+并编辑好该业务组件所绑定的数据源、字段, 然后在看板编辑器里, 就可以将该业务组件拖拽放入画布中, 并且可以预览和发布该看板.<br><p></p> <p>这是最基本的流程. <br>
+除去业务组件本身外, 还需要一些过滤组件来给业务组件添加筛选和过滤条件. 比如可以添加一个下拉框, 并绑定某几个业务组件的name字段, 那么在预览状态时, 用户可以通过这个下拉框来过滤上述业务组件的name字段, 比如让这些业务组件只显示name 等于‘张三’的数据. <br></p> <p>仅仅只有业务组件和过滤组件, 页面会显得太过单调和死板, 因此还需要一些其他类型的组件, 比如文字、图片等。</p> <h2 id="_2-程序功能"><a href="#_2-程序功能" class="header-anchor">#</a> 2. 程序功能</h2> <p>在知晓业务场景和最终产物后, 我们需要将这些业务功能转换为程序的功能.</p> <ol><li>组件描述
+组件通过json来描述</li></ol> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// 组件</span>
+<span class="token keyword">interface</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  style<span class="token operator">:</span> Style <span class="token comment">// 样式</span>
+  events<span class="token operator">:</span> Object <span class="token comment">// 事件</span>
+  jump<span class="token operator">:</span> Jump <span class="token comment">// 跳转设置, 两个不同页面间业务组件的设置, 即点击一个业务组件, 会跳转到新页面并对新页面的某个组件进行过滤</span>
+  linkage<span class="token operator">:</span> Linkage <span class="token comment">// 联动设置</span>
+  props<span class="token operator">:</span> Props <span class="token comment">// 组件的Props, 存放组件的数据</span>
+  <span class="token keyword">class</span><span class="token operator">:</span> <span class="token string">&quot;c-component&quot;</span>
+  isShow<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否显示</span>
+  isDrop<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 当前准备接受被放入组件的组件</span>
+  isGeometry<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否拥有几何属性配置</span>
+  isData<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否拥有数据配置</span>
+  isStyle<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否拥有样式配置</span>
+  isEvent<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否拥有事件配置</span>
+  isLinkage<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否拥有联动配置</span>
+  isJump<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token comment">// 是否拥有跳转配置</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><ol start="2"><li>通过拖拽将组件添加到画布</li></ol> <p>拖放我采用的是H5的拖放api <b>（Drag and Drop）</b></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+  <span class="token comment">// 组件列表</span>
+  <span class="token keyword">function</span> <span class="token function">item</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div onDragstart<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span><span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">handleDragStart</span><span class="token punctuation">(</span>treeNode<span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">}</span> slot<span class="token operator">=</span><span class="token string">'title'</span> draggable<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>name<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  
+
+  <span class="token function">handleDragStart</span><span class="token punctuation">(</span><span class="token parameter">data<span class="token punctuation">,</span>event</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">// 保留当前鼠标距离选中元素的偏移量</span>
+    <span class="token keyword">const</span> mouseOffset <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">x</span><span class="token operator">:</span> event<span class="token punctuation">.</span>offsetX<span class="token punctuation">,</span>
+      <span class="token literal-property property">y</span><span class="token operator">:</span> event<span class="token punctuation">.</span>offsetY
+    <span class="token punctuation">}</span>
+
+    event<span class="token punctuation">.</span>dataTransfer<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">&quot;data&quot;</span><span class="token punctuation">,</span> <span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>data<span class="token punctuation">,</span> mouseOffset<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+</code></pre></div><div class="language-jsx extra-class"><pre class="language-jsx"><code>  <span class="token comment">// 画布</span>
+  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>canvasId<span class="token punctuation">}</span></span> 
+        <span class="token attr-name">onDrop</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleDrop<span class="token punctuation">}</span></span> 
+        <span class="token attr-name">ondragover</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleDragover<span class="token punctuation">}</span></span>
+        <span class="token attr-name">onMousedown</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleMouseDown<span class="token punctuation">}</span></span>
+        <span class="token attr-name">onMousemove</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleMouseMove<span class="token punctuation">}</span></span>
+        <span class="token attr-name">onMouseup</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleMouseUp<span class="token punctuation">}</span></span>
+        <span class="token attr-name">onContextmenu</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleContextmenu<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        // 渲染画布里的组件
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ComponentRender</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text"> 
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token function">handleDrop</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>data<span class="token punctuation">,</span> mouseOffset<span class="token punctuation">,</span> type<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">parse</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>dataTransfer<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">&quot;data&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> component <span class="token operator">=</span> data
+    
+    <span class="token comment">// 设置组件的唯一标识</span>
+    component<span class="token punctuation">.</span>key <span class="token operator">=</span> <span class="token function">updateComponentKey</span><span class="token punctuation">(</span>component<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+    <span class="token comment">// 组件原点是左上角</span>
+    <span class="token comment">// 因此,组件坐标为 offsetX - 当前鼠标距离当前组件原点的距离</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>x<span class="token punctuation">,</span> y<span class="token punctuation">}</span> <span class="token operator">=</span> mouseOffset
+    component<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> event<span class="token punctuation">.</span>offsetX <span class="token operator">-</span> x
+    component<span class="token punctuation">.</span>style<span class="token punctuation">.</span>top <span class="token operator">=</span> event<span class="token punctuation">.</span>offsetY <span class="token operator">-</span> y
+    
+    <span class="token keyword">this</span><span class="token punctuation">.</span>componentList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>component<span class="token punctuation">)</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><ol start="3"><li>组件的渲染</li></ol> <p>每一个组件都是一个Component对象, 渲染组件的&quot;画布&quot;, 则通过一个ComponentList来描述 <br></p> <p>首先先要给所有需要渲染的组件注册.<br></p> <ul><li>创建一个自定义组件</li></ul> <div class="language-html extra-class"><pre class="language-html"><code>  <span class="token comment">&lt;!-- CButton组件 --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-button</span> <span class="token attr-name">:size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>element.style.size<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>styleFilter(element.style)<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>element.style.type<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-on</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>setEventVm()<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{title}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> mixin <span class="token keyword">from</span> <span class="token string">&quot;../mixin&quot;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> getProps <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./attr&quot;</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">mixins</span><span class="token operator">:</span> <span class="token punctuation">[</span>mixin<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token function">getProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">size</span><span class="token operator">:</span> <span class="token string">&quot;small&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>less<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">&quot;./index.less&quot;</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>组件注册</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span>
+  <span class="token keyword">const</span> components <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;CText&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CBox&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CButton&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CEcharts&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CTable&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CDatePicker&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CRangePicker&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CSelect&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CWeb&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CTabs&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CCustom&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;CWidget&quot;</span>
+  <span class="token punctuation">]</span>
+
+  components<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">./</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>组件渲染</li></ul> <p>起初我打算使用 vue 的动态组件来显示画布中组件的渲染,</p> <div class="language-html extra-class"><pre class="language-html"><code>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span> <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>currentTabComponent<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>但是考虑到组件列表是树结构, 即会出现组件嵌套组件的情况, 因此最终选择通过switch来根据组件的key来渲染对应组件</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code>  <span class="token function">renderComponent</span><span class="token punctuation">(</span><span class="token parameter">tag</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">switch</span><span class="token punctuation">(</span>tag<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">case</span> <span class="token string">&quot;c-text&quot;</span><span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>c-text</span> <span class="token attr-name">props</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>props<span class="token punctuation">}</span></span> <span class="token attr-name">element</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>element<span class="token punctuation">}</span></span> <span class="token attr-name">draggable</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span></span> <span class="token attr-name">id</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>id<span class="token punctuation">}</span></span> <span class="token attr-name">class</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>className<span class="token punctuation">}</span></span> <span class="token attr-name">isPreview</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>isPreview<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  
+
+</code></pre></div><p>在预览状态下, 组件只需要处理自身的交互.但是在编辑状态下, 组件还有点击、拖动等事件, 这些交互不需要和直接组件绑定, 因此我在组件外层包裹一个Wrap组件, 用于处理编辑状态下的交互</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code>
+  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+      componentList<span class="token punctuation">,</span>
+      renderComponent
+    <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>component-list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token punctuation">{</span>
+          componentList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Wrap</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token punctuation">{</span><span class="token function">renderComponent</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>tag<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+              </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Wrap</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token plain-text">
+        
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><ol start="4"><li>组件在画布中的拖动</li></ol> <p>由于组件会嵌套组件, 因此组件的内容区也需要监听其子组件的拖动, 所以组件拖动的触发位置只能是组件的非内容区.我的处理是, 在组件的左上方给组件添加了一个拖动的图标, 鼠标按住这个图标才能拖动
+</p><div style="text-align:center;"><img src="/images/20220226/拖动.jpg"></div>
+在点击组件的拖动图标, 触发mousedown时, 记录当前鼠标基于屏幕的绝对坐标startPosition. 拖动时, 触发mousemove, 获取当前鼠标绝对坐标endPosition, 然后用endPosition - startPosition就能获取鼠标的移动量, 再用鼠标的坐标加上移动量, 便能获得组件的新坐标.最后, 再将endPosition的位置赋值给startPosition.<p></p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token comment">// 点击组件</span>
+  <span class="token function">handleComponentMouseDown</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    event<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>type<span class="token punctuation">,</span> index<span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>dataset
+    <span class="token comment">// 如果点击的是拖动图标</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">&quot;drag-wrap&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token comment">// 开始拖拽时的初始位置</span>
+      mouseZoomStart <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">x</span><span class="token operator">:</span> event<span class="token punctuation">.</span>clientX<span class="token punctuation">,</span>
+        <span class="token literal-property property">y</span><span class="token operator">:</span> event<span class="token punctuation">.</span>clientY
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// 表示可以拖动</span>
+      isMouseDragDown <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+    
+
+  <span class="token punctuation">}</span>
+
+  <span class="token function">handleMouseMove</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    event<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>isMouseDragDown<span class="token punctuation">)</span><span class="token punctuation">{</span> 
+      <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 开始位置</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>x<span class="token punctuation">,</span>y<span class="token punctuation">}</span> <span class="token operator">=</span> selectedMouseOffset
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+      left<span class="token punctuation">,</span>
+      top
+    <span class="token punctuation">}</span> <span class="token operator">=</span> component<span class="token punctuation">.</span>style
+    <span class="token comment">// 获取鼠标的偏移量</span>
+    <span class="token keyword">const</span> offsetX <span class="token operator">=</span> event<span class="token punctuation">.</span>clientX <span class="token operator">-</span> x
+    <span class="token keyword">const</span> offsetY <span class="token operator">=</span> event<span class="token punctuation">.</span>clientY <span class="token operator">-</span> y
+    <span class="token comment">// 获取新坐标</span>
+    <span class="token keyword">const</span> newLeft <span class="token operator">=</span> left <span class="token operator">+</span> offsetX
+    <span class="token keyword">const</span> newTop <span class="token operator">=</span> top <span class="token operator">+</span> offsetY 
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">left</span><span class="token operator">:</span> pLeft<span class="token punctuation">,</span>
+      <span class="token literal-property property">top</span><span class="token operator">:</span> pTop
+    <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">componentToPercentage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token operator">...</span>component<span class="token punctuation">.</span>style<span class="token punctuation">,</span>
+      <span class="token literal-property property">left</span><span class="token operator">:</span> newLeft<span class="token punctuation">,</span>
+      <span class="token literal-property property">top</span><span class="token operator">:</span> newTop
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    component<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> pLeft
+    component<span class="token punctuation">.</span>style<span class="token punctuation">.</span>top <span class="token operator">=</span> pTop
+
+    <span class="token comment">// 然后将现在的位置赋值给初始位置</span>
+    selectedMouseOffset <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">x</span><span class="token operator">:</span> event<span class="token punctuation">.</span>clientX<span class="token punctuation">,</span>
+      <span class="token literal-property property">y</span><span class="token operator">:</span> event<span class="token punctuation">.</span>clientY
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  handleMoudeUp <span class="token punctuation">{</span>
+    isMouseDragDown <span class="token operator">=</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+  
+  
+
+
+</code></pre></div><p>到了这里, 基本就实现了最基本的拖拽添加组件, 拖拽移动组件. <br>
+本篇主要是对核心业务和功能做了梳理, 以及对组件的json描述、渲染、拖放拖动的实现思路做了总结.<br></p> <p>下一篇, 开始处理组件拖拽的辅助功能, 比如缩放组件、标线对齐和吸附、组件的多选、组件的嵌套等</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.bb41b8b8.js" defer></script><script src="/assets/js/3.dc5e7bc7.js" defer></script><script src="/assets/js/1.f19b5812.js" defer></script><script src="/assets/js/69.8a1d0022.js" defer></script>
+  </body>
+</html>

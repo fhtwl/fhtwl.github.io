@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>如何实现chatgpt官网的打字效果 | 云游</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="favicon.ico">
+    <script src="/live2dw/L2Dwidget.min.js"></script>
+    <script src="/live2dw/L2Dwidget.0.min.js"></script>
+    <script src="/live2dw/initLine2dw.js"></script>
+    <link rel="stylesheet" href="/live2dw/initLine2dw.css">
+    <meta name="description" content="仰天大笑出门去">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.746f5c46.css" as="style"><link rel="preload" href="/assets/js/app.bb41b8b8.js" as="script"><link rel="preload" href="/assets/js/3.dc5e7bc7.js" as="script"><link rel="preload" href="/assets/js/1.f19b5812.js" as="script"><link rel="preload" href="/assets/js/19.a6f6542f.js" as="script"><link rel="prefetch" href="/assets/js/10.063f4d84.js"><link rel="prefetch" href="/assets/js/11.7aaafe6d.js"><link rel="prefetch" href="/assets/js/12.1d3cbcb7.js"><link rel="prefetch" href="/assets/js/13.3eff3441.js"><link rel="prefetch" href="/assets/js/14.02dd8526.js"><link rel="prefetch" href="/assets/js/15.50ff646b.js"><link rel="prefetch" href="/assets/js/16.27b298f9.js"><link rel="prefetch" href="/assets/js/17.e2099983.js"><link rel="prefetch" href="/assets/js/18.46575e3b.js"><link rel="prefetch" href="/assets/js/20.7a97f207.js"><link rel="prefetch" href="/assets/js/21.44aae7d8.js"><link rel="prefetch" href="/assets/js/22.deee24a8.js"><link rel="prefetch" href="/assets/js/23.afc5c989.js"><link rel="prefetch" href="/assets/js/24.5cc0db4a.js"><link rel="prefetch" href="/assets/js/25.b32a0210.js"><link rel="prefetch" href="/assets/js/26.dd7f021b.js"><link rel="prefetch" href="/assets/js/27.75cbd20b.js"><link rel="prefetch" href="/assets/js/28.fd785ab3.js"><link rel="prefetch" href="/assets/js/29.ab41b57d.js"><link rel="prefetch" href="/assets/js/30.3b45d1b9.js"><link rel="prefetch" href="/assets/js/31.265c7096.js"><link rel="prefetch" href="/assets/js/32.a389e6c4.js"><link rel="prefetch" href="/assets/js/33.21b47ce7.js"><link rel="prefetch" href="/assets/js/34.2e4a9508.js"><link rel="prefetch" href="/assets/js/35.2cf2d583.js"><link rel="prefetch" href="/assets/js/36.04f28724.js"><link rel="prefetch" href="/assets/js/37.9ae99470.js"><link rel="prefetch" href="/assets/js/38.ba5a299d.js"><link rel="prefetch" href="/assets/js/39.ee22d2a7.js"><link rel="prefetch" href="/assets/js/4.47f43f55.js"><link rel="prefetch" href="/assets/js/40.f39e2de0.js"><link rel="prefetch" href="/assets/js/41.2e5294db.js"><link rel="prefetch" href="/assets/js/42.bf48ff38.js"><link rel="prefetch" href="/assets/js/43.c357ee2c.js"><link rel="prefetch" href="/assets/js/44.44e307d8.js"><link rel="prefetch" href="/assets/js/45.233a8aec.js"><link rel="prefetch" href="/assets/js/46.e1ecc5c4.js"><link rel="prefetch" href="/assets/js/47.ba60baaf.js"><link rel="prefetch" href="/assets/js/48.68b91f10.js"><link rel="prefetch" href="/assets/js/49.0e497621.js"><link rel="prefetch" href="/assets/js/5.e8c05b51.js"><link rel="prefetch" href="/assets/js/50.9a2c708d.js"><link rel="prefetch" href="/assets/js/51.7b06c587.js"><link rel="prefetch" href="/assets/js/52.10498614.js"><link rel="prefetch" href="/assets/js/53.a761f85e.js"><link rel="prefetch" href="/assets/js/54.74a61bd8.js"><link rel="prefetch" href="/assets/js/55.042dd0bb.js"><link rel="prefetch" href="/assets/js/56.f3d86d97.js"><link rel="prefetch" href="/assets/js/57.efb08319.js"><link rel="prefetch" href="/assets/js/58.1989caf6.js"><link rel="prefetch" href="/assets/js/59.f96f3191.js"><link rel="prefetch" href="/assets/js/6.027fb3c9.js"><link rel="prefetch" href="/assets/js/60.3bbca17f.js"><link rel="prefetch" href="/assets/js/61.4daed6ce.js"><link rel="prefetch" href="/assets/js/62.d4770557.js"><link rel="prefetch" href="/assets/js/63.3164420a.js"><link rel="prefetch" href="/assets/js/64.6d294ffc.js"><link rel="prefetch" href="/assets/js/65.c80d1e4a.js"><link rel="prefetch" href="/assets/js/66.9a35d593.js"><link rel="prefetch" href="/assets/js/67.475b1606.js"><link rel="prefetch" href="/assets/js/68.96fd51bc.js"><link rel="prefetch" href="/assets/js/69.8a1d0022.js"><link rel="prefetch" href="/assets/js/7.b5f855a8.js"><link rel="prefetch" href="/assets/js/70.01cd122f.js"><link rel="prefetch" href="/assets/js/71.f60293c4.js"><link rel="prefetch" href="/assets/js/72.c81ec735.js"><link rel="prefetch" href="/assets/js/8.5ac3177c.js"><link rel="prefetch" href="/assets/js/9.070251bd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.746f5c46.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1aefc0b4><div data-v-1aefc0b4><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1aefc0b4 data-v-1aefc0b4><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>云游</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>仰天大笑出门去</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>fhtwl</span>
+            
+          <!---->
+          2023
+        </a></span></div></div> <div class="hide" data-v-1aefc0b4><header class="navbar" data-v-1aefc0b4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">云游</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其它/" class="nav-link"><i class="undefined"></i>
+  其它
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="undefined"></i>
+  后端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="https://github.com/fhtwl/fhtwl.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1aefc0b4></div> <aside class="sidebar" data-v-1aefc0b4><div class="personal-info-wrapper" data-v-39576ba9 data-v-1aefc0b4><!----> <h3 class="name" data-v-39576ba9>
+    fhtwl
+  </h3> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>61</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>66</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其它/" class="nav-link"><i class="undefined"></i>
+  其它
+</a></li><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="undefined"></i>
+  后端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="https://github.com/fhtwl/fhtwl.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>如何实现chatgpt官网的打字效果</h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><span data-v-25ba6db2>fhtwl</span>
+            
+          <!---->
+          2023
+        </a></span></div></div> <div data-v-1aefc0b4><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">如何实现chatgpt官网的打字效果</h1> <div data-v-f875f3fc><i class="iconfont reco-account" data-v-f875f3fc><span data-v-f875f3fc>fhtwl</span></i> <i class="iconfont reco-date" data-v-f875f3fc><span data-v-f875f3fc>5/8/2023</span></i> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/blog/http/3.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-f875f3fc><span class="tag-item" data-v-f875f3fc>http</span></i></div></div> <div class="theme-reco-content content__default"><h1 id="一、前言"><a href="#一、前言" class="header-anchor">#</a> 一、前言</h1> <p>最近一段时间, chatgpt 仿佛横空出世, 瞬间冲入了所有人的视野之内. 因为种种原因, 无数的 chatgpt 网站镜像和小程序也开发了出来. 今天我们实现其打字特效</p> <p><a href="https://ext.dcloud.net.cn/plugin?id=11668">体验地址</a> <img src="https://static.fhtwl.cc/logo/chatgpt-mini.png"></p> <h1 id="二、为什么是打字特效"><a href="#二、为什么是打字特效" class="header-anchor">#</a> 二、为什么是打字特效</h1> <p>打字特效的初衷，是因为等待请求完成的时间太长，而采用的一种优化方案。</p> <p>在读取和获取大量数据时，用户需要等待很长时间，显然这种体验非常差。如果我们能每读取到一点数据，就将数据渲染出来，就能极大缩短用户初始的反馈时间。且打字的效果，能持续给人以正向的反馈，让人产生期待的心理。</p> <p>此外，打字效果，与人说话非常相似，想到一点说一点，让人感觉对面是个真实的人</p> <h1 id="三、如何实现打字特效"><a href="#三、如何实现打字特效" class="header-anchor">#</a> 三、如何实现打字特效</h1> <p>首先，我们需要将数据以 <em>stream</em> 流的形式传递给前端</p> <p>这里我们使用 koa 实现一个简单的后台服务</p> <blockquote><p>基础的环境搭建，如 ts、eslint、安装、启动等，请 阅读我的 <a href="https://juejin.cn/post/7094830308637278216#heading-1">超细致 nodejs + koa2 + ts + mysql + redis 后端框架搭建 1.后端环境搭建和常见中间件使用和开发</a> 的第二章节，里面有完整的介绍，这里就不在赘述</p></blockquote> <p>创建 app.ts</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// app.ts</span>
+<span class="token keyword">import</span> Koa <span class="token keyword">from</span> <span class="token string">&quot;koa&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">&quot;path&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> fs <span class="token keyword">from</span> <span class="token string">&quot;fs&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 创建koa实例</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 监听端口</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">server success </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token number">3000</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>此时，访问 localhost:3000，页面会提示 404，这表明我们的后端服务已启动成功</p> <p>然后我们对请求做出响应</p> <p>在 app.ts 里新增以下内容</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// app.ts</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ChatTransform <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./ChatTransform&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// 请求到来时的处理</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> originalUrl <span class="token operator">=</span> ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>originalUrl<span class="token punctuation">;</span>
+  <span class="token comment">// 浏览器会自动注册serviceWorker脚本，不用处理</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>originalUrl <span class="token operator">===</span> <span class="token string">&quot;/serviceWorker.js&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> fileName <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;data.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 以流的形式创建文件读取流</span>
+  <span class="token keyword">const</span> stream <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">createReadStream</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 继承了Transform,实现了一个自定义的转换流</span>
+  <span class="token keyword">const</span> transformStream <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ChatTransform</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 将可读流stream连接到ChatTransform这个转换流</span>
+  stream<span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>transformStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 设置流的格式</span>
+  ctx<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">&quot;Content-Type&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;text/plain; charset=utf-8&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 将流返回给前端</span>
+  ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> stream<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// ChatTransform.ts</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Transform <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;stream&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ChatTransform</span> <span class="token keyword">extends</span> <span class="token class-name">Transform</span> <span class="token punctuation">{</span>
+  buffer<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  parsedLine<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>buffer <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>parsedLine <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">_transform</span><span class="token punctuation">(</span>chunk<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> _encoding<span class="token operator">:</span> BufferEncoding<span class="token punctuation">,</span> <span class="token function-variable function">callback</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 对chunk的数据进行转换</span>
+    <span class="token keyword">const</span> chunkText <span class="token operator">=</span> chunk<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> lines <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>buffer<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>chunkText<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>buffer <span class="token operator">=</span> lines<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> line <span class="token keyword">of</span> lines<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 将转换后的数据返回给下游</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">_flush</span><span class="token punctuation">(</span><span class="token function-variable function">callback</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>buffer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>buffer<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> \n</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>此时再访问 <a href="localhost:3000">localhost:3000</a> , 页面就会以流的形式返回。如果 <em>data.log</em> 足够大，或者网速较慢的情况下，我们是能看到页面里显示的文本逐渐变多，出现滚动条的效果的</p> <p>配合前端，就能实现打字效果。</p> <p>当请求的数据是 stream 流时，我们可以使用 <em>response.body.getReader()</em> 来替代 <em>response.json()</em> 或者 <em>response.text()</em></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- index.html --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&quot;/api/chat-stream&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&quot;POST&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">&quot;Content-Type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application/json&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> reader <span class="token operator">=</span> response<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">getReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 用于将ArrayBuffe解码为字符串</span>
+  <span class="token keyword">const</span> decoder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TextDecoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> responseText <span class="token operator">=</span> <span class="token string">''</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在 body 下载时，一直为无限循环</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 当最后一块下载完成时，done 值为 true</span>
+      <span class="token comment">// value 是块字节的 Uint8Array</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span>done<span class="token punctuation">,</span> value<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> reader<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> text <span class="token operator">=</span> decoder<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      responseText <span class="token operator">+=</span> text
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>done<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Received </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token punctuation">.</span>length<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> bytes</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>responseText<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h1 id="小程序等不支持-stream-的客户端如何实现-stream-流"><a href="#小程序等不支持-stream-的客户端如何实现-stream-流" class="header-anchor">#</a> 小程序等不支持 stream 的客户端如何实现 stream 流</h1> <p>小程序是不支持并不支持 http stream, 我们可以使用 websocket 来实现数据的流式传输</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> WebSocketServer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;ws&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ChatTransform <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./ChatTransform&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> fetch <span class="token keyword">from</span> <span class="token string">&quot;node-fetch&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> wss <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSocketServer</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  port<span class="token operator">:</span> <span class="token number">3001</span><span class="token punctuation">,</span>
+  path<span class="token operator">:</span> <span class="token string">&quot;/ws&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name"><span class="token constant">WS</span></span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">initWebSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">initWebSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    wss<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;connection&quot;</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>ws<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      ws<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;message&quot;</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> msg <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>message<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token string">&quot;utf-8&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> type<span class="token punctuation">,</span> body <span class="token punctuation">}</span> <span class="token operator">=</span> msg<span class="token punctuation">;</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 收到消息</span>
+          <span class="token keyword">case</span> <span class="token string">&quot;message&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">&quot;https://api.openai.com/v1/chat/completions&quot;</span><span class="token punctuation">;</span>
+            <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+              method<span class="token operator">:</span> <span class="token string">&quot;POST&quot;</span><span class="token punctuation">,</span>
+              body<span class="token punctuation">,</span>
+              headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token string-property property">&quot;Content-Type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application/json&quot;</span><span class="token punctuation">,</span>
+                Authorization<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Bearer ACCESS_TOKEN</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">const</span> transformStream <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ChatTransform</span><span class="token punctuation">(</span><span class="token punctuation">(</span>data<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;line&quot;</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token comment">// stream 传输数据</span>
+                  ws<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>
+                    <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                      type<span class="token operator">:</span> <span class="token string">&quot;line&quot;</span><span class="token punctuation">,</span>
+                      data<span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                transformStream<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;finish&quot;</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;finish&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token comment">// stream传输完毕</span>
+                  ws<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>
+                    <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                      type<span class="token operator">:</span> <span class="token string">&quot;finish&quot;</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                response<span class="token punctuation">.</span>body<span class="token operator">?.</span><span class="token function">pipe</span><span class="token punctuation">(</span>transformStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                ws<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>
+                  <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                    type<span class="token operator">:</span> <span class="token string">&quot;line-error&quot;</span><span class="token punctuation">,</span>
+                    data<span class="token operator">:</span> err<span class="token punctuation">.</span>message<span class="token punctuation">,</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>然后在前端使用 websocket 监听并更新数据</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> socketTask <span class="token operator">=</span> uni<span class="token punctuation">.</span><span class="token function">connectSocket</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">&quot;ws://127.0.0.1:3001&quot;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">header</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application/json&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">authorization</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+socketTask<span class="token punctuation">.</span><span class="token function">onOpen</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;WebSocket连接正常！&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>socketTask<span class="token punctuation">.</span><span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">//onMessage这个监听在封装的js中赋值给了socketTask对象</span>
+    <span class="token keyword">const</span> msg <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> type<span class="token punctuation">,</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> msg<span class="token punctuation">;</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">case</span> <span class="token string">&quot;line&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 将数据渲染到页面上</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">case</span> <span class="token string">&quot;finish&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 响应完毕</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h1> <p>本文主要介绍了 chatgpt 使用打字特效的原因，已经分别通过 http 和 websocket 实现 stream 打字特效。</p> <p>如果觉得本文对你有帮忙，麻烦点赞支持，谢谢。</p> <p>文中若有错误或者可优化之处, 望请不吝赐教</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.bb41b8b8.js" defer></script><script src="/assets/js/3.dc5e7bc7.js" defer></script><script src="/assets/js/1.f19b5812.js" defer></script><script src="/assets/js/19.a6f6542f.js" defer></script>
+  </body>
+</html>
